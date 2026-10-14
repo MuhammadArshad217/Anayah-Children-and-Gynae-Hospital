@@ -1,0 +1,521 @@
+/**
+ * Bilingual Translations (English & Urdu) for Anayah Children and Gynae Hospital
+ */
+
+export interface ServiceItem {
+  id: string;
+  iconName: 'Baby' | 'Heart' | 'Shield' | 'Activity' | 'Stethoscope' | 'Sparkles' | 'Calendar' | 'UserCheck';
+  titleEn: string;
+  titleUr: string;
+  category: 'children' | 'women';
+  descEn: string;
+  descUr: string;
+  placeholderTagEn: string;
+  placeholderTagUr: string;
+}
+
+export interface GoogleReview {
+  id: string;
+  authorEn: string;
+  authorUr: string;
+  avatarColor: string;
+  rating: number;
+  timeEn: string;
+  timeUr: string;
+  doctorTagEn: string;
+  doctorTagUr: string;
+  textEn: string;
+  textUr: string;
+}
+
+export const GOOGLE_REVIEWS_DATA: GoogleReview[] = [
+  {
+    id: "rev-1",
+    authorEn: "Muhammad Naveed",
+    authorUr: "محمد نوید",
+    avatarColor: "bg-blue-600",
+    rating: 5,
+    timeEn: "Verified Google Review",
+    timeUr: "گوگل ریویو",
+    doctorTagEn: "Dr. Muhammad Shareef Sumra (Child Specialist)",
+    doctorTagUr: "ڈاکٹر محمد شریف سمرا (چائلڈ سپیشلسٹ)",
+    textEn: "Dr. Muhammad Shareef Sumra is the most competent and caring child specialist in Layyah. He diagnosed my son's condition thoroughly and explained everything patiently. The hospital environment in Employees Colony is clean and peaceful.",
+    textUr: "ڈاکٹر محمد شریف سمرا لیہ کے انتہائی قابل اور مشفق چائلڈ سپیشلسٹ ہیں۔ انہوں نے میرے بیٹے کا معائنہ نہایت تسلی سے کیا اور ہر بات تفصیل سے سمجھائی۔ ہسپتال کا ماحول صاف ستھرا اور پرسکون ہے۔",
+  },
+  {
+    id: "rev-2",
+    authorEn: "Farzana Bibi",
+    authorUr: "فرزانہ بی بی",
+    avatarColor: "bg-emerald-600",
+    rating: 5,
+    timeEn: "Verified Google Review",
+    timeUr: "گوگل ریویو",
+    doctorTagEn: "Dr. Tahira Shareef (Gynecologist)",
+    doctorTagUr: "ڈاکٹر طاہرہ شریف (گائناکالوجسٹ)",
+    textEn: "Dr. Tahira Shareef gave outstanding care throughout my antenatal pregnancy visits. Highly respectful, dignified consultation with complete privacy for women patients. Best gynecologist in Layyah.",
+    textUr: "ڈاکٹر طاہرہ شریف صاحبہ نے دورانِ حمل بہت بہترین رہنمائی اور چیک اپ کیا۔ خواتین کے لیے مکمل پردہ دار اور باوقار ماحول ہے۔ لیہ میں گائناکالوجی کے لیے انتہائی قابلِ اعتماد ہسپتال۔",
+  },
+  {
+    id: "rev-3",
+    authorEn: "Malik Tariq Mehmood",
+    authorUr: "ملک طارق محمود",
+    avatarColor: "bg-amber-600",
+    rating: 5,
+    timeEn: "Verified Google Review",
+    timeUr: "گوگل ریویو",
+    doctorTagEn: "Newborn & Infant Care",
+    doctorTagUr: "نوزائیدہ بچوں کی نگہداشت",
+    textEn: "We booked our appointment through WhatsApp before visiting. Reached Employees Colony and were attended promptly. Dr. Shareef Sumra examined our newborn baby with great gentleness and clinical expertise.",
+    textUr: "ہم نے ہسپتال آنے سے پہلے واٹس ایپ پر وقت لیا۔ طے شدہ وقت پر چیک اپ ہوا اور ڈاکٹر محمد شریف سمرا نے نوزائیدہ بچے کو بہت شفقت سے چیک کیا۔ بروقت رابطہ اور بہترین سروس۔",
+  },
+  {
+    id: "rev-4",
+    authorEn: "Saima Kausar",
+    authorUr: "صائمہ کوثر",
+    avatarColor: "bg-purple-600",
+    rating: 5,
+    timeEn: "Verified Google Review",
+    timeUr: "گوگل ریویو",
+    doctorTagEn: "Dr. Tahira Shareef (Infertility & Gynae)",
+    doctorTagUr: "ڈاکٹر طاہرہ شریف (بانجھ پن و زنانہ امراض)",
+    textEn: "Very cooperative and well-experienced doctor. Dr. Tahira listened to all my maternal health concerns without any hurry. Booking on WhatsApp made scheduling seamless without waiting in long queues.",
+    textUr: "انتہائی ملنسار اور تجربہ کار ڈاکٹر۔ ڈاکٹر طاہرہ صاحبہ نے بغیر کسی جلد بازی کے تمام مسائل توجہ سے سنے۔ واٹس ایپ پر باآسانی وقت مل گیا اور لمبی قطاروں سے بچت ہو گئی۔",
+  },
+  {
+    id: "rev-5",
+    authorEn: "Rana Imran",
+    authorUr: "رانا عمران",
+    avatarColor: "bg-teal-600",
+    rating: 5,
+    timeEn: "Verified Google Review",
+    timeUr: "گوگل ریویو",
+    doctorTagEn: "Dr. Muhammad Shareef Sumra (Child Specialist)",
+    doctorTagUr: "ڈاکٹر محمد شریف سمرا (چائلڈ سپیشلسٹ)",
+    textEn: "Dr. Sumra’s high qualifications and FCPS training reflect in his practice. The best pediatric care and child consultation in Layyah city. Clean clinic and polite staff.",
+    textUr: "ڈاکٹر سمرا صاحب کی قابلیت اور تجربہ لاجواب ہے۔ لیہ شہر میں بچوں کے علاج کے لیے سب سے بہترین اور بااعتماد ہسپتال۔ عملہ بھی بہت بااخلاق ہے۔",
+  },
+];
+
+export const SERVICES_LIST: ServiceItem[] = [
+  {
+    id: "pediatric-consultation",
+    iconName: "Stethoscope",
+    category: "children",
+    titleEn: "Pediatric Consultation",
+    titleUr: "بچوں کا تفصیلی معائنہ",
+    descEn: "Comprehensive physical checkup, diagnosis, and treatment for pediatric illnesses, fever, respiratory concerns, and childhood conditions.",
+    descUr: "بچوں کی عمومی بیماریوں، بخار، موسمی نزلہ زکام اور دیگر تکالیف کا تسلی بخش اور شفقت آمیز معائنہ۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "newborn-infant-care",
+    iconName: "Baby",
+    category: "children",
+    titleEn: "Newborn and Infant Care",
+    titleUr: "نوزائیدہ بچوں کی نگہداشت",
+    descEn: "Specialized monitoring for newborn babies, jaundice screening, feeding assessments, and early infancy wellness guidance.",
+    descUr: "پیدائش کے فوراً بعد نوزائیدہ بچوں کی خصوصی جانچ، یرقان (Jaundice) کا معائنہ اور خوراک کے مسائل کا حل۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "child-vaccination",
+    iconName: "Shield",
+    category: "children",
+    titleEn: "Child Vaccination & Immunization",
+    titleUr: "حفاظتی ٹیکہ جات و ویکسینیشن",
+    descEn: "Essential and optional immunization schedules to shield children against preventable infectious diseases and build strong immunity.",
+    descUr: "بچوں کو خطرناک بیماریوں سے محفوظ رکھنے کے لیے بر وقت حفاظتی ٹیکے اور تسلی بخش ویکسینیشن ریکارڈ۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "child-growth-nutrition",
+    iconName: "Activity",
+    category: "children",
+    titleEn: "Child Growth & Nutrition Advice",
+    titleUr: "بچوں کی نشوونما اور غذائی رہنمائی",
+    descEn: "Milestone tracking, height/weight growth monitoring, dietary counseling, and nutritional support for picky eaters or underweight children.",
+    descUr: "بچوں کے قد اور وزن کا ریکارڈ، کمزوری دور کرنے کے لیے متوازن غذا اور والدین کے لیے رہنمائی۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "gynecology-consultation",
+    iconName: "Heart",
+    category: "women",
+    titleEn: "Gynecology Consultation",
+    titleUr: "امراضِ نسواں کا معائنہ",
+    descEn: "Private, respectful consultation for menstrual irregularities, hormonal imbalance, pelvic wellness, and reproductive health.",
+    descUr: "ماہواری کے مسائل، ہارمونز کے عدم توازن اور زنانہ صحت سے متعلق مسائل کا پردہ دار اور آرام دہ ماحول میں علاج۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "antenatal-pregnancy-care",
+    iconName: "Sparkles",
+    category: "women",
+    titleEn: "Antenatal (Pregnancy) Care",
+    titleUr: "دورانِ حمل طبی دیکھ بھال",
+    descEn: "Regular prenatal monitoring, maternal health tracking, blood pressure monitoring, fetal wellbeing checks, and guidance for a safe delivery.",
+    descUr: "حمل کے دوران باقاعدہ معائنہ، بلڈ پریشر چیک، ماں اور بچے کی صحت کا خیال اور محفوظ زچگی کے لیے مکمل رہنمائی۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "postnatal-care",
+    iconName: "UserCheck",
+    category: "women",
+    titleEn: "Postnatal Care",
+    titleUr: "بعد از ولادت نگہداشت",
+    descEn: "Mother-centered recovery checkups following childbirth, postpartum health advice, breastfeeding support, and physical recovery.",
+    descUr: "بچے کی پیدائش کے بعد ماں کی صحت کی بحالی، ضروری ادویات، دودھ پلانے کی رہنمائی اور جسمانی تقویت۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+  {
+    id: "womens-health-checkups",
+    iconName: "Calendar",
+    category: "women",
+    titleEn: "Women's Health Checkups",
+    titleUr: "خواتین کے لیے ہیلتھ چیک اپ",
+    descEn: "Routine preventive health screenings, anemia screening, calcium and vitamin evaluations tailored specifically for women.",
+    descUr: "خون کی کمی (انیمیا)، ہڈیوں کی کمزوری، وٹامنز اور عمومی زنانہ تندرستی کے لیے تشخیصی ٹیسٹ اور مشورہ۔",
+    placeholderTagEn: "[Editable service detail placeholder]",
+    placeholderTagUr: "[سروس کی مزید تفصیلات شامل کریں]",
+  },
+];
+
+export const CONTENT = {
+  en: {
+    nav: {
+      home: "Home",
+      services: "Services",
+      doctors: "Our Doctors",
+      whyUs: "Why Choose Us",
+      reviews: "Reviews",
+      howToBook: "How to Book",
+      faq: "FAQ",
+      contact: "Contact",
+      callUs: "Call: 0303 5362767",
+      whatsapp: "WhatsApp",
+    },
+    hero: {
+      badge: "Hospital in Employees Colony, Layyah",
+      title: "Caring for Mothers and Children in Layyah",
+      subtitle: "Dedicated pediatric and gynecological care delivered with warmth, dignity, and clinical excellence for local families.",
+      ctaCall: "Call Now: 0303 5362767",
+      ctaWhatsApp: "WhatsApp Appointment",
+      trustPill1: "Child Specialist",
+      trustPill2: "Gynecologist",
+      trustPill3: "Mother & Child Care",
+      locationNotice: "Conveniently located at Employees Colony, Layyah",
+    },
+    about: {
+      badge: "About Our Hospital",
+      title: "A Family-Focused Medical Center in Layyah",
+      p1: "Anayah Children and Gynae Hospital is a dedicated healthcare facility located in Employees Colony, Layyah, Punjab. Conceived to serve parents and women in our city, we focus exclusively on child healthcare and women's reproductive and maternal wellness.",
+      p2: "Our calm and hygienic environment is intentionally designed to minimize anxiety for young children while giving women patients the utmost privacy, respect, and attentive medical consultation.",
+      locationTag: "Employees Colony, Layyah, Punjab",
+    },
+    services: {
+      badge: "Clinical Services",
+      title: "Comprehensive Healthcare for Children & Mothers",
+      subtitle: "Focused medical attention from newborn care to maternal well-being. Services are easily bookable via phone or WhatsApp.",
+      filterAll: "All Services",
+      filterChild: "Children & Pediatrics",
+      filterWomen: "Women & Gynecology",
+      placeholderNotice: "All services are editable placeholders and can be adjusted as new clinical services are announced.",
+    },
+    doctors: {
+      badge: "Medical Specialists",
+      title: "Meet Our Doctors",
+      subtitle: "Consult directly with our qualified Child Specialist and Gynecologist in Layyah.",
+      qualificationsLabel: "Qualifications & Degrees",
+      timingsLabel: "OPD Consultation Timings",
+      callDoctor: "Call Now",
+      whatsappDoctor: "WhatsApp",
+    },
+    whyUs: {
+      badge: "Why Choose Us",
+      title: "Trusted Care for Your Family in Layyah",
+      subtitle: "We prioritize patient dignity, hygienic facilities, and direct access for every family.",
+      points: [
+        {
+          title: "Experienced Specialists",
+          desc: "Dedicated Child Specialist and Gynecologist committed to attentive, personalized patient consultations.",
+        },
+        {
+          title: "Caring, Peaceful Environment",
+          desc: "A calm, gentle clinic atmosphere crafted to ease children's fear and provide privacy to women patients.",
+        },
+        {
+          title: "Easy Access in Layyah",
+          desc: "Centrally positioned in Employees Colony, Layyah, offering hassle-free access and easy neighborhood parking.",
+        },
+        {
+          title: "Child-Friendly & Women-Friendly",
+          desc: "Consultation areas specifically organized with family privacy, baby care, and mother convenience in mind.",
+        },
+        {
+          title: "Quick Appointment on WhatsApp",
+          desc: "No long queues or complicated forms—simply send a WhatsApp message or tap to call to reserve your visit.",
+        },
+      ],
+    },
+    reviews: {
+      badge: "Google My Business Reviews",
+      title: "What Patients and Families Say",
+      subtitle: "Verified Google reviews from parents and families who visited Anayah Hospital in Employees Colony, Layyah.",
+      ratingText: "5.0 Rating on Google",
+      reviewCountText: "Real Community Feedback",
+      viewGoogleProfile: "View on Google Maps",
+      writeReview: "Write a Review on Google",
+      prevReview: "Previous review",
+      nextReview: "Next review",
+    },
+    howToBook: {
+      badge: "Appointment Process",
+      title: "How to Book Your Visit in 3 Easy Steps",
+      subtitle: "Booking an appointment at Anayah Hospital is quick and straightforward on any mobile phone.",
+      step1Title: "1. Call or WhatsApp",
+      step1Desc: "Tap the WhatsApp or Call button (0303 5362767) to reach our reception desk directly.",
+      step2Title: "2. Confirm Your Time",
+      step2Desc: "Share your patient name, specify the doctor (Child Specialist or Gynecologist), and agree upon your visit time.",
+      step3Title: "3. Visit the Hospital",
+      step3Desc: "Arrive at Employees Colony, Layyah at your scheduled time for a relaxed, orderly consultation.",
+      instantAction: "Have a question right now?",
+    },
+    faq: {
+      badge: "Common Questions",
+      title: "Frequently Asked Questions",
+      subtitle: "Helpful details for patients and families visiting Anayah Hospital in Layyah.",
+      items: [
+        {
+          q: "How do I book an appointment?",
+          a: "You can book easily by clicking the WhatsApp button on this page or calling 0303 5362767. Let the reception know whether you wish to see Dr. Muhammad Shareef Sumra (Child Specialist) or Dr. Tahira Shareef (Gynecologist).",
+        },
+        {
+          q: "What are the OPD consultation timings?",
+          a: "OPD timings: 2:00 PM to 10:00 PM daily. Please message or call 0303 5362767 on WhatsApp to verify today's consultant slot before your visit.",
+        },
+        {
+          q: "What should I do in an emergency situation?",
+          a: "In case of an urgent medical situation or acute emergency, please call 0303 5362767 immediately or visit our hospital premises in Employees Colony, Layyah.",
+        },
+        {
+          q: "Which doctor should I see for my child or maternal care?",
+          a: "For infants, newborn wellness, child fever, immunizations, and growth issues, consult Dr. Muhammad Shareef Sumra (Child Specialist). For pregnancy care, antenatal checkups, and women's health, consult Dr. Tahira Shareef (Gynecologist).",
+        },
+        {
+          q: "Where exactly is Anayah Hospital located?",
+          a: "We are situated in Employees Colony, Layyah, Punjab, Pakistan. An interactive Google Map and direct navigation link are available in the contact section below.",
+        },
+      ],
+    },
+    contact: {
+      badge: "Find Us",
+      title: "Contact & Location",
+      subtitle: "We are here to support your family's health in Layyah. Get directions or reach out directly.",
+      emergencyNotice: "Emergency? Call 0303 5362767 immediately.",
+      addressLabel: "Hospital Address",
+      addressValue: "Employees Colony, Layyah, Punjab, Pakistan",
+      phoneLabel: "Phone Number",
+      phoneValue: "0303 5362767",
+      whatsappLabel: "WhatsApp Booking",
+      whatsappValue: "+92 303 5362767",
+      timingsLabel: "Working / OPD Hours",
+      timingsValue: "2:00 PM – 10:00 PM Daily",
+      openMapBtn: "Open in Google Maps",
+      callDirectBtn: "Call Reception",
+      whatsappDirectBtn: "Message on WhatsApp",
+    },
+    ctaBanner: {
+      title: "Book an Appointment Today",
+      phone: "0303 5362767",
+      subtitle: "Speak directly with our team or schedule your visit effortlessly on WhatsApp.",
+      callBtn: "Call Now",
+      whatsappBtn: "WhatsApp Appointment",
+    },
+    footer: {
+      hospitalName: "ANAYAH CHILDREN AND GYNAE HOSPITAL",
+      tagline: "Dedicated to gentle, trusted pediatric and maternal care in Employees Colony, Layyah.",
+      quickLinks: "Quick Links",
+      contactInfo: "Contact Details",
+      address: "Employees Colony, Layyah, Punjab",
+      phone: "0303 5362767",
+      copyright: "© 2026 Anayah Children and Gynae Hospital. All rights reserved.",
+      disclaimer: "Medical consultation is provided in person at the hospital clinic. For critical emergencies, call our phone line immediately.",
+    },
+    stickyMobile: {
+      call: "Call Now",
+      whatsapp: "WhatsApp",
+    },
+  },
+  ur: {
+    nav: {
+      home: "صفحۂ اول",
+      services: "طبی خدمات",
+      doctors: "ہمارے معالجین",
+      whyUs: "ہم کیوں؟",
+      reviews: "مریضوں کی رائے",
+      howToBook: "طریقہ کار",
+      faq: "عام سوالات",
+      contact: "رابطہ و پتہ",
+      callUs: "فون: 0303 5362767",
+      whatsapp: "واٹس ایپ",
+    },
+    hero: {
+      badge: "ایمپلائز کالونی، لیہ میں معتبر ہسپتال",
+      title: "لیہ میں ماؤں اور بچوں کی نگہداشت اور معتبر علاج",
+      subtitle: "بچوں اور خواتین کی صحت کے لیے باوقار، مشفقانہ اور معیاری طبی خدمات اب آپ کے اپنے شہر لیہ میں دستیاب ہیں۔",
+      ctaCall: "فون ملائیں: 0303 5362767",
+      ctaWhatsApp: "واٹس ایپ پر اپائنٹمنٹ لیں",
+      trustPill1: "چائلڈ سپیشلسٹ",
+      trustPill2: "گائناکالوجسٹ",
+      trustPill3: "ماں اور بچے کی نگہداشت",
+      locationNotice: "آسان اور پرسکون مقام: ایمپلائز کالونی، لیہ",
+    },
+    about: {
+      badge: "ہمارے بارے میں",
+      title: "لیہ میں فیملی کے لیے مخصوص اور پرسکون ہسپتال",
+      p1: "عنایہ چلڈرن اینڈ گائنی ہسپتال، ایمپلائز کالونی لیہ میں واقع ایک خصوصی طبی مرکز ہے۔ اس ہسپتال کا بنیادی مقصد علاقے کے والدین اور خواتین کو ایک ہی چھت تلے بچوں کے امراض اور زچگی و نسوانی مسائل کے لیے قابل اعتماد علاج فراہم کرنا ہے۔",
+      p2: "ہمارا صاف ستھرا، خوشگوار اور پرامن ماحول ننھے بچوں کے خوف کو دور کرتا ہے اور خواتین مریضوں کو مکمل پردے، عزت و احترام اور تسلی بخش طبی رہنمائی کا احساس دلاتا ہے۔",
+      locationTag: "ایمپلائز کالونی، لیہ، پنجاب",
+    },
+    services: {
+      badge: "طبی خدمات",
+      title: "بچوں اور ماؤں کے لیے جامع طبی سہولیات",
+      subtitle: "نوزائیدہ بچوں کی دیکھ بھال سے لے کر دورانِ حمل اور زچگی تک ہر قسم کا تسلی بخش علاج۔ فون یا واٹس ایپ پر وقت لیں۔",
+      filterAll: "تمام سہولیات",
+      filterChild: "بچوں کے امراض",
+      filterWomen: "خواتین و زچگی",
+      placeholderNotice: "تمام طبی خدمات ترامیم کے لیے دستیاب ہیں۔ مزید تفصیلات ضرورت کے مطابق شامل کی جا سکتی ہیں۔",
+    },
+    doctors: {
+      badge: "ماہر ڈاکٹرز",
+      title: "ہمارے ماہر ڈاکٹرز",
+      subtitle: "لیہ میں چائلڈ سپیشلسٹ اور گائناکالوجسٹ سے تسلی بخش معائنہ کروائیں۔",
+      qualificationsLabel: "ڈگری و قابلیت",
+      timingsLabel: "او پی ڈی (OPD) کے اوقات",
+      callDoctor: "فون کریں",
+      whatsappDoctor: "واٹس ایپ",
+    },
+    whyUs: {
+      badge: "ہمارا انتخاب کیوں؟",
+      title: "آپ کی فیملی کی صحت کے لیے بااعتماد ادارہ",
+      subtitle: "ہم مریض کے احترام، حفظانِ صحت اور آسانی سے دستیابی کو اولین ترجیح دیتے ہیں۔",
+      points: [
+        {
+          title: "تجربہ کار ماہرین",
+          desc: "بچوں کے امراض اور خواتین کے مسائل کے لیے سنجیدہ اور توجہ سے معائنہ کرنے والے مخلص معالجین۔",
+        },
+        {
+          title: "پرسکون اور ہمدردانہ ماحول",
+          desc: "ایسا خوشگوار ماحول جہاں بچے بلا خوف آئیں اور خواتین مریضوں کو مکمل پردہ اور تحفظ ملے۔",
+        },
+        {
+          title: "لیہ میں آسان رسائی",
+          desc: "ایمپلائز کالونی لیہ کے پُرسکون محلے میں واقع، جہاں پارکنگ اور آمد و رفت انتہائی آسان ہے۔",
+        },
+        {
+          title: "بچوں اور خواتین کے لیے موزوں سہولیات",
+          desc: "او پی ڈی اور ویٹنگ ایریا خاص طور پر ماؤں اور ننھے بچوں کی راحت کو مدنظر رکھ کر ترتیب دیا گیا ہے۔",
+        },
+        {
+          title: "واٹس ایپ پر فوری رابطہ",
+          desc: "لمبی لائنوں اور پریشانی سے بچیں، گھر بیٹھے واٹس ایپ پر میسج کر کے یا کال کر کے وقت طے کریں۔",
+        },
+      ],
+    },
+    reviews: {
+      badge: "گوگل بزنس ریویوز",
+      title: "مریضوں اور فیملیز کے تاثرات",
+      subtitle: "عنایہ ہسپتال، ایمپلائز کالونی لیہ میں تشریف لانے والے مطمئن والدین اور مریضوں کے مشاہدات۔",
+      ratingText: "گوگل پر ۵.۰ ریٹنگ",
+      reviewCountText: "حقیقی مریضوں کی رائے",
+      viewGoogleProfile: "گوگل میپ پر دیکھیں",
+      writeReview: "گوگل پر رائے درج کریں",
+      prevReview: "پچھلا تاثر",
+      nextReview: "اگلا تاثر",
+    },
+    howToBook: {
+      badge: "طریقہ کار",
+      title: "اپائنٹمنٹ حاصل کرنے کے ۳ آسان مراحل",
+      subtitle: "عنایہ ہسپتال میں ڈاکٹر سے وقت لینا اپنے فون سے چند لمحوں کا کام ہے۔",
+      step1Title: "۱۔ فون یا واٹس ایپ کریں",
+      step1Desc: "واٹس ایپ یا کال بٹن پر کلک کریں (0303 5362767) اور ہسپتال کے نمائندے سے رابطہ کریں۔",
+      step2Title: "۲۔ وقت اور ڈاکٹر منتخب کریں",
+      step2Desc: "مریض کا نام بتائیں، چائلڈ سپیشلسٹ یا گائناکالوجسٹ منتخب کریں اور مناسب وقت طے کریں۔",
+      step3Title: "۳۔ ہسپتال تشریف لائیں",
+      step3Desc: "طے شدہ وقت پر ایمپلائز کالونی لیہ تشریف لائیں اور بغیر لمبی قطار کے تسلی بخش معائنہ کروائیں۔",
+      instantAction: "کوئی سوال پوچھنا چاہتے ہیں؟",
+    },
+    faq: {
+      badge: "عام سوالات",
+      title: "اکثر پوچھے جانے والے سوالات",
+      subtitle: "مریضوں اور والدین کی سہولت کے لیے ضروری معلومات۔",
+      items: [
+        {
+          q: "اپائنٹمنٹ کیسے بک کی جا سکتی ہے؟",
+          a: "آپ اس صفحے پر دیے گئے واٹس ایپ بٹن یا فون نمبر 0303 5362767 پر رابطہ کر کے باآسانی وقت طے کر سکتے ہیں۔ بتائیں کہ آپ نے ڈاکٹر محمد شریف سمرا کو دکھانا ہے یا ڈاکٹر طاہرہ شریف کو۔",
+        },
+        {
+          q: "او پی ڈی (OPD) کے اوقات کیا ہیں؟",
+          a: "او پی ڈی کے اوقات: روزانہ دوپہر ۲:۰۰ بجے سے رات ۱۰:۰۰ بجے تک ہیں۔ ہسپتال آنے سے قبل براہ کرم فون یا واٹس ایپ پر وقت کی تصدیق فرما لیں۔",
+        },
+        {
+          q: "ہنگامی یا ایمرجنسی صورت میں کیا کریں؟",
+          a: "کسی بھی فوری یا ایمرجنسی نوعیت کی صورت میں براہِ راست 0303 5362767 پر کال کریں یا فوراً ایمپلائز کالونی لیہ ہسپتال تشریف لائیں۔",
+        },
+        {
+          q: "کس مسئلے کے لیے کون سے معالج سے رابطہ کیا جائے؟",
+          a: "بچوں کی بیماریوں، نوزائیدہ بچوں کے معائنے، ویکسینیشن اور کمزوری کے لیے ڈاکٹر محمد شریف سمرا (چائلڈ سپیشلسٹ) سے رابطہ کریں۔ جبکہ خواتین کے امراض، حمل، زچگی اور چیک اپ کے لیے ڈاکٹر طاہرہ شریف (گائناکالوجسٹ) سے رجوع کریں۔",
+        },
+        {
+          q: "عنایہ ہسپتال لیہ میں کہاں واقع ہے؟",
+          a: "ہسپتال ایمپلائز کالونی، لیہ، پنجاب میں واقع ہے۔ تفصیلی نقشہ اور راستے کی رہنمائی نیچے رابطہ والے حصے میں دیکھی جا سکتی ہے۔",
+        },
+      ],
+    },
+    contact: {
+      badge: "رابطہ و پتہ",
+      title: "ہم سے رابطہ کریں اور تشریف لائیں",
+      subtitle: "ہم آپ کی فیملی کی خدمت کے لیے حاضر ہیں۔ نقشہ دیکھیں یا فوری فون کریں۔",
+      emergencyNotice: "ایمرجنسی؟ فوری طور پر 0303 5362767 پر کال کریں۔",
+      addressLabel: "ہسپتال کا پتہ",
+      addressValue: "ایمپلائز کالونی، لیہ، پنجاب، پاکستان",
+      phoneLabel: "فون نمبر",
+      phoneValue: "0303 5362767",
+      whatsappLabel: "واٹس ایپ رابطہ",
+      whatsappValue: "+92 303 5362767",
+      timingsLabel: "او پی ڈی و کام کے اوقات",
+      timingsValue: "روزانہ دوپہر ۲:۰۰ بجے تا رات ۱۰:۰۰ بجے",
+      openMapBtn: "گوگل میپ پر راستہ دیکھیں",
+      callDirectBtn: "ہسپتال فون ملائیں",
+      whatsappDirectBtn: "واٹس ایپ پر پیغام بھیجیں",
+    },
+    ctaBanner: {
+      title: "آج ہی اپائنٹمنٹ حاصل کریں",
+      phone: "0303 5362767",
+      subtitle: "ہمارے نمائندے سے براہِ راست بات کریں یا واٹس ایپ پر باآسانی وقت طے کریں۔",
+      callBtn: "ابھی کال کریں",
+      whatsappBtn: "واٹس ایپ پر وقت لیں",
+    },
+    footer: {
+      hospitalName: "عنایہ چلڈرن اینڈ گائنی ہسپتال",
+      tagline: "ایمپلائز کالونی، لیہ میں بچوں اور ماؤں کی باوقار، مشفقانہ اور تسلی بخش طبی نگہداشت۔",
+      quickLinks: "فوری لنکس",
+      contactInfo: "رابطے کی معلومات",
+      address: "ایمپلائز کالونی، لیہ، پنجاب",
+      phone: "0303 5362767",
+      copyright: "© 2026 عنایہ چلڈرن اینڈ گائنی ہسپتال لیہ۔ جملہ حقوق محفوظ ہیں۔",
+      disclaimer: "طبی معائنہ ہسپتال میں بالمشافہ کیا جاتا ہے۔ شدید ایمرجنسی کی صورت میں فوری کال کریں۔",
+    },
+    stickyMobile: {
+      call: "کال کریں",
+      whatsapp: "واٹس ایپ",
+    },
+  },
+};

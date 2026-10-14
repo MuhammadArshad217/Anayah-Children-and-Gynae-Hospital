@@ -1,0 +1,8 @@
+{
+  "name": "Anayah Children and Gynae Hospital Layyah",
+  "description": "Anayah Children and Gynae Hospital in Layyah, Punjab. Child Specialist & Gynecologist care. Call 0303 5362767.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

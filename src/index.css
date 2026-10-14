@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Noto Nastaliq Urdu', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 8px 24px 4px rgba(37, 211, 102, 0.6);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: pulse-subtle 2.4s infinite ease-in-out;
+}
+
+/* Ensure minimum touch target for mobile usability */
+.tap-target-min {
+  min-height: 48px;
+  min-width: 48px;
+}
+
